@@ -110,7 +110,7 @@ select * from netflix
 ### 10. Find each year and the average numbers of content release by India on netflix, return top 5 year with highest avg content release !
 ```sql
 	SELECT country, release_year, COUNT(show_id) as total_release,
-	ROUND(COUNT(show_id)::numeric / (SELECT COUNT(show_id) FROM netflix WHERE country = 'India')::numeric * 100 ,2) as 	avg_release
+	ROUND(COUNT(show_id)::numeric / (SELECT COUNT(show_id) FROM netflix WHERE country = 'India')::numeric * 100 ,2) as avg_release
 	FROM netflix
 	WHERE country = 'India' 
 	GROUP BY country, 2
@@ -217,5 +217,37 @@ select * from netflix
 	WHERE listed_in LIKE '%Romantic%'
 	ORDER BY 2 DESC;
 ```
+# Findings and conclusion
+### Findings:
+
+1. Content Distribution:
+Movies make up a larger percentage of Netflix's content compared to TV Shows. 
+The top genres include Documentaries, Dramas, and International TV Shows, showcasing Netflix's diverse offerings.
+
+2. Directors and Production Insights:
+The top directors, such as [Top Director Names], have contributed significantly to Netflix's library.
+Countries like the United States, India, and the United Kingdom dominate the production of Netflix content.
+
+3. Trends Over Time:
+Netflix has seen consistent growth in adding TV Shows, as shown by cumulative counts of TV show additions over the years.
+The rolling average of content released per year highlights spikes in production in recent years.
+
+4. Content Characteristics:
+Romantic genres and TV-MA-rated titles dominate specific regions, including India, emphasizing regional preferences.
+On average, movies on Netflix are about X minutes long, while TV Shows average Y seasons.
+
+5. Global Representation:
+Countries like India and the United States produce significant TV Shows, with India also excelling in romantic genres. 
+The dataset highlights the importance of international collaborations in Netflix's global strategy.
+
+6. Unique Observations:
+Duplicate titles exist, but their occurrence is minimal, suggesting high curation standards.
+The most frequent ratings, such as TV-MA and PG-13, align with Netflix's target audience demographics.
+
+### Conclusion:
+The Netflix dataset reveals the platform's global reach, diverse content library, and strategic focus on high-demand genres and regions. Using SQL queries, uncovered trends in content release, production, and preferences, offering valuable insights for content creators, marketers, and data analysts.
+
+This project demonstrates the power of SQL in analyzing real-world datasets, extracting actionable insights, and understanding the dynamics of a global streaming platform like Netflix. Future work could involve building visual dashboards to complement these findings or integrating machine learning models for content recommendation.
+
 
 
