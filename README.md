@@ -7,3 +7,8 @@ This project demonstrates advanced SQL querying techniques on the Netflix datase
 3. Country-Specific Analysis: Highlight top countries producing content and their distribution between movies and TV shows.
 4. Performance Metrics: Queries provide percentages, cumulative counts, and averages for enhanced data comprehension.
 These queries showcase SQL capabilities for handling real-world datasets, offering value to anyone exploring data analytics or Netflix content trends.
+
+## Dataset
+The dataset is taken from kaggle.
+
+# Schemas
